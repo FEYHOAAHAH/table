@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h3>Товары</h3>
+        {% for el in products %}
+        <div class="products">
+             {{el.id}} - {{ el.product }} - {{ el.count }}
+        </div>
+        {% endfor %}
+
+
+    <h3>Заказы</h3>
+    {% for or in orders %}
+    <div class="orders">
+        {{or.order_number}} - {{ or.client_name }} - {{ or.product_id }} - {{ or.order_cost }}
+    </div>
+    {% endfor %}
+
+
+    <h3>Пользователи</h3>
+    {% for us in users %}
+    <div class="users">
+        {{ us.user_id }} - {{ us.user_name }} - {{ us.user_nickname }}
+    </div>
+    {% endfor %}
+
+
+    <h3>Мыши</h3>
+    {% for ms in mouses %}
+    <div class="mouses">
+        {{ ms.m_developer }} - {{ ms.m_count }}
+    </div>
+    {% endfor %}
+
+
+    <h3>Клавиатуры</h3>
+    {% for kb in keyboards %}
+    <div class="keyboards">
+        {{ kb.k_developer }} - {{ kb.k_count }}
+    </div>
+    {% endfor %}
+
+
+    <h3>Наушники</h3>
+    {% for hp in headphones %}
+    <div class="headphones">
+        {{ hp.h_developer }} - {{ hp.h_count }}
+    </div>
+    {% endfor %}
+
+
+    <h3>Геймпады</h3>
+    {% for gp in gamepads%}
+    <div class="gamepads">
+        {{ gp.g_developer }} - {{ gp.g_count }}
+    </div>
+    {% endfor %}
+
+
+
+    <h3>Ноутбуки</h3>
+    {% for nb in notebooks%}
+    <div class="gamepads">
+        {{ nb.n_developer }} - {{ nb.n_count }}
+    </div>
+    {% endfor %}
+
+
+
+
+
+
+</body>
+</html>
